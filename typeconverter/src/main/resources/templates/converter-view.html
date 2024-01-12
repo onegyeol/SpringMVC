@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>${number}: <span th:text="${number}" ></span></li>
+    <li>${{number}}: <span th:text="${{number}}" ></span></li><!-- 컨버터 적용. 문자로 바꿈 -->
+    <li>${ipPort}: <span th:text="${ipPort}" ></span></li> <!-- 그냥 출력시 toString() 호출됐기에 복잡한 문자열이 출력 -->
+    <li>${{ipPort}}: <span th:text="${{ipPort}}" ></span></li> <!-- 컨버터 적용. ipPort를 문자로 바꿈 -->
+</ul>
+</body>
+</html>
